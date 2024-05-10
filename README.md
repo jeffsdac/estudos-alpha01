@@ -4,11 +4,11 @@ Esse projeto é dedicado aos meus estudos a respeito de Spring e springBoot, sen
 
 ## Endpoints Map:
 - __User__
-   - [GET_ALL](#retornar-usuarios)
-   - [REGISTER]()
-   - GET_BY_ID
-   - UPDATE
-   - DELETE
+   - [Retornar todos](#retornar-usuarios)
+   - [Registrar](#registrar-user)
+   - [Retornar pelo ID](#retornar-user-pelo-id)
+   - [UPDATE](#atualizar-usuário-pelo-id)
+   - [DELETE](#Deletar-usuário-pelo-ID)
 
 __CLASSE: User mapeamento de atributos__
 | campo | tipo | obrigatório | descrição
@@ -48,7 +48,10 @@ __Respostas__
 |200| os dados foram retornados
 |404| endereço não encontrado
 
-### POST em /users
+### Registrar User
+
+`POST`/users
+
 __Registra um usuário na nosso banco de dados__,nessa requisição é necessário colocar um body no formato JSON, segue abaixo um exemplo do body:
 
 ```js
@@ -65,7 +68,8 @@ __Respostas__
 |201| a clinica foi cadastrada com sucesso
 |400| campos inválidos
 
-### GET em /users/{id}
+### Retornar User pelo ID
+`GET`/users/__{id}__
 __Retorna o usuário com o ID informado na URL da requisição__, segue abaixo um exemplo de retorno: 
 ```js
 {
@@ -82,7 +86,10 @@ __Respostas__
 |200| os dados foram retornados
 |404| não foi  encontrado User com esse ID
 
-## PUT em /users/{id}
+## Atualizar usuário pelo ID
+
+`PUT`/users/__{ID}__
+
 __Atualiza um User em nosso DB, essa requisição recebe um body em formato JSON, segue abaixo o exemplo:__
 ```js
 {
@@ -99,7 +106,8 @@ __Respostas__
 |200| os dados foram retornados
 |404| não foi  encontrado User com esse ID
 
-### DELETE em /users/{id}
+### Deletar usuário pelo ID
+`DELETE`/users/__{ID}__
 __Deleta um User em nosso DB, essa requisição recebe um ID em sua URL__
 
 __Respostas__
