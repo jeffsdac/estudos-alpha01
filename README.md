@@ -7,8 +7,8 @@ Esse projeto é dedicado aos meus estudos a respeito de Spring e springBoot, sen
    - [Retornar todos](#retornar-usuarios)
    - [Registrar](#registrar-user)
    - [Retornar pelo ID](#retornar-user-pelo-id)
-   - [UPDATE](#atualizar-usuário-pelo-id)
-   - [DELETE](#Deletar-usuário-pelo-ID)
+   - [Atualizar](#atualizar-usuário-pelo-id)
+   - [Deletar](#Deletar-usuário-pelo-ID)
 
 __CLASSE: User mapeamento de atributos__
 | campo | tipo | obrigatório | descrição
@@ -69,7 +69,9 @@ __Respostas__
 |400| campos inválidos
 
 ### Retornar User pelo ID
+
 `GET`/users/__{id}__
+
 __Retorna o usuário com o ID informado na URL da requisição__, segue abaixo um exemplo de retorno: 
 ```js
 {
@@ -107,7 +109,9 @@ __Respostas__
 |404| não foi  encontrado User com esse ID
 
 ### Deletar usuário pelo ID
+
 `DELETE`/users/__{ID}__
+
 __Deleta um User em nosso DB, essa requisição recebe um ID em sua URL__
 
 __Respostas__
